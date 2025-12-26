@@ -1,0 +1,162 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..f50de7b9662ee4db3cb8e98d13b5ed24211fb0c4
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,152 @@
++<!DOCTYPE html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Tug Gelato | Handcrafted Seasonal Scoops</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap"
++      rel="stylesheet"
++    />
++    <!-- TODO: Swap to self-hosted fonts when ready. -->
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <!-- Hero Section -->
++    <header class="hero">
++      <nav class="hero__nav">
++        <span class="hero__logo">Tug Gelato</span>
++        <a class="button button--ghost" href="https://tuggelato.myshopify.com/products/xxx">
++          Order Online
++        </a>
++      </nav>
++      <div class="hero__content">
++        <div>
++          <p class="hero__eyebrow">Small-batch • Seasonal • Creamy</p>
++          <h1>Handcrafted gelato that feels like summer on the bay.</h1>
++          <p class="hero__subheadline">
++            Discover rotating flavors inspired by the waterfront, made daily with local ingredients.
++          </p>
++          <div class="hero__actions">
++            <a class="button" href="https://tuggelato.myshopify.com/products/xxx">
++              Shop scoops
++            </a>
++            <a class="button button--outline" href="#seasonal-flavors">
++              View seasonal flavors
++            </a>
++          </div>
++        </div>
++        <div class="hero__image">
++          <img
++            src="images/hero-gelato.jpg"
++            alt="Gelato scoops in seasonal flavors"
++          />
++          <!-- Replace with your image file -->
++        </div>
++      </div>
++    </header>
++
++    <!-- Promotions Section -->
++    <section class="promotions">
++      <div class="promotions__content">
++        <h2>Weekly promotions to sweeten your week</h2>
++        <p>
++          From midweek mini scoops to Friday flight specials, there is always something new at Tug.
++        </p>
++        <a class="button button--outline" href="https://tuggelato.myshopify.com/products/xxx">
++          Grab a promo pack
++        </a>
++      </div>
++      <div class="promotions__cards">
++        <article class="promo-card">
++          <h3>Sunset Scoop Happy Hour</h3>
++          <p>Buy two scoops, get the third half off every weekday 4-6pm.</p>
++        </article>
++        <article class="promo-card">
++          <h3>Family Flight Box</h3>
++          <p>Four seasonal pints curated weekly for your next gathering.</p>
++        </article>
++      </div>
++    </section>
++
++    <!-- Seasonal Flavors Section -->
++    <section class="seasonal" id="seasonal-flavors">
++      <div class="section-heading">
++        <h2>Seasonal flavors on deck</h2>
++        <p>Rotating daily. Ask about allergen-free and dairy-free options.</p>
++      </div>
++      <div class="seasonal__grid">
++        <article class="flavor-card">
++          <img src="images/flavor-citrus.jpg" alt="Citrus sunrise gelato" />
++          <!-- Replace with your image file -->
++          <h3>Citrus Sunrise</h3>
++          <p>Blood orange, lemon zest, and a hint of sea salt.</p>
++        </article>
++        <article class="flavor-card">
++          <img src="images/flavor-berry.jpg" alt="Berry harbor gelato" />
++          <!-- Replace with your image file -->
++          <h3>Berry Harbor</h3>
++          <p>Roasted strawberries, blueberry swirl, and fresh basil.</p>
++        </article>
++        <article class="flavor-card">
++          <img src="images/flavor-caramel.jpg" alt="Salted caramel gelato" />
++          <!-- Replace with your image file -->
++          <h3>Salted Caramel Drift</h3>
++          <p>House caramel with toasty brown butter crunch.</p>
++        </article>
++        <article class="flavor-card">
++          <img src="images/flavor-mint.jpg" alt="Mint cocoa gelato" />
++          <!-- Replace with your image file -->
++          <h3>Harbor Mint Chip</h3>
++          <p>Garden mint, cacao nibs, and dark chocolate ribbons.</p>
++        </article>
++      </div>
++    </section>
++
++    <!-- Countdown Section -->
++    <section class="countdown">
++      <div class="countdown__content">
++        <h2>Next limited batch drops in</h2>
++        <p>Set your reminder for our weekend flavor release.</p>
++      </div>
++      <div class="countdown__timer" aria-live="polite">
++        <div class="timer-block">
++          <span id="days">00</span>
++          <small>Days</small>
++        </div>
++        <div class="timer-block">
++          <span id="hours">00</span>
++          <small>Hours</small>
++        </div>
++        <div class="timer-block">
++          <span id="minutes">00</span>
++          <small>Minutes</small>
++        </div>
++        <div class="timer-block">
++          <span id="seconds">00</span>
++          <small>Seconds</small>
++        </div>
++      </div>
++    </section>
++
++    <!-- Footer Section -->
++    <footer class="footer">
++      <div>
++        <h2>Visit Tug Gelato</h2>
++        <p>Open daily 11am - 9pm • Pier 6, Harbor Walk</p>
++      </div>
++      <div class="footer__actions">
++        <a class="button" href="https://tuggelato.myshopify.com/products/xxx">
++          Order pints
++        </a>
++        <a class="button button--ghost" href="mailto:hello@tuggelato.com">
++          Contact us
++        </a>
++      </div>
++    </footer>
++
++    <script src="script.js"></script>
++  </body>
++</html>
+ 
+EOF
+)
